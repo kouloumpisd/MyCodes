@@ -1,0 +1,61 @@
+# MyCodes
+
+char data = 0;
+
+
+void setup() {
+ Serial.begin(112500);
+ 
+ pinMode(2, OUTPUT);//M1 Rear Right
+ pinMode(3, OUTPUT);
+ pinMode(6, OUTPUT);//Enable
+ digitalWrite(2, 0);
+ digitalWrite(3, 1);
+ digitalWrite(6, 1);
+ 
+ pinMode(4, OUTPUT);//M2 Front Right
+ pinMode(5, OUTPUT);
+ pinMode(9, OUTPUT);//Enable
+ digitalWrite(4, 0);
+ digitalWrite(5, 1);
+ digitalWrite(9, 1);
+ 
+ pinMode(7, OUTPUT);//M3 Rear Left
+ pinMode(8, OUTPUT);
+ pinMode(10, OUTPUT);//Enable
+ digitalWrite(7, 0);
+ digitalWrite(8, 1);
+ digitalWrite(10, 1);
+
+ pinMode(13, OUTPUT);//M4 Front Left
+ pinMode(12, OUTPUT);
+ pinMode(11, OUTPUT);//Enable
+ digitalWrite(13, 0);
+ digitalWrite(12, 1);
+ digitalWrite(11, 1);
+
+}
+void loop() {
+
+//if(Serial.available() > 0) // Προχώρα παρακάτω μόνο αν έλαβες κάτι...
+//{
+//data = Serial.read(); //Διάβασε το byte που ήρθε και αποθήκευσέ το
+//if(data == 11) //Αν έλαβες τον αριθμό 11...
+//digitalWrite(2, HIGH); //Άναψε το πρώτο LED
+//else if(data == 10) //Αν έλαβες τον αριθμό 10...
+//digitalWrite(2, LOW); //Σβήσε το πρώτο LED
+//else if(data == 21) //Αν έλαβες τον αριθμό 21...
+//digitalWrite(3, HIGH); //Άναψε το δεύτερο LED
+//else if(data == 20) //Αν έλαβες τον αριθμό 20...
+//digitalWrite(3, LOW); //Σβήσε το δεύτερο LED
+//}
+
+
+ 
+analogWrite(6,255);
+analogWrite(9,255);
+analogWrite(10,255);
+analogWrite(11,255);
+
+}
+
